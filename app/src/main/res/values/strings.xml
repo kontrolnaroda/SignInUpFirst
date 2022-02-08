@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">SignInUpFirst</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="name">Name</string>
+    <string name="surname">Surname</string>
+    <string name="surname2">Surname2</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="load_image">Load avatar</string>
+</resources>
