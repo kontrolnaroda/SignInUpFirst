@@ -8,7 +8,7 @@ import androidx.core.view.isVisible
 import com.example.signinupfirst.databinding.ActivitySignInUpBinding
 
 class SignInUpAct : AppCompatActivity() {
-    lateinit var bindingclass : ActivitySignInUpBinding
+    private lateinit var bindingclass : ActivitySignInUpBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,11 +25,11 @@ class SignInUpAct : AppCompatActivity() {
     }
 
     }
-    fun onClick2(view: View){
+    fun onClick2(@Suppress("UNUSED_PARAMETER")view: View){
         bindingclass.avatar.setImageResource(R.drawable.avatar)
         bindingclass.avatar.visibility = View.VISIBLE
     }
-fun onClick1(view: View){
+fun onClick1(@Suppress("UNUSED_PARAMETER")view: View){
         val i = Intent()
          i.putExtra(Constance.LOGIN, bindingclass.editLogin.text.toString())
         i.putExtra(Constance.PASSWORD, bindingclass.editPassword.text.toString())
