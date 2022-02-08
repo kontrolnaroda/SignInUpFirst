@@ -73,7 +73,7 @@ if (bindingclass.btSignUp.text == Constance.EXIT) {
     )
 }
   }
-    fun  onClickSignIn(view: View){
+    fun  onClickSignIn(view: View){ 
 
 
             launcher2?.launch(
