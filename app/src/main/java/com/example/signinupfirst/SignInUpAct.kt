@@ -16,7 +16,7 @@ class SignInUpAct : AppCompatActivity() {
         setContentView(bindingclass.root)
 
        val  state = intent.getStringExtra(Constance.Statemy)
-        if (state == Constance.StateIn){ 
+        if (state == Constance.StateIn){
             bindingclass.editName.visibility = View.GONE
             bindingclass.editSurname.visibility = View.GONE
             bindingclass.editSurname2.visibility = View.GONE
