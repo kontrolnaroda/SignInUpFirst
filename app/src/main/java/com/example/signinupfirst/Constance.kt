@@ -11,6 +11,7 @@ object Constance {
     const val StateUp = "Sign Up"
     const val AVATAR_ID = "avatar id"
     const val EXIT = "Выход"
+    const val EMPTY = "empty"
 
 
 

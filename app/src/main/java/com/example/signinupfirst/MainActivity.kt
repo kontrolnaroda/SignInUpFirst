@@ -1,5 +1,6 @@
 package com.example.signinupfirst
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -13,13 +14,14 @@ class MainActivity : AppCompatActivity() {
     private var launcher: ActivityResultLauncher<Intent>? = null
     private var launcher2: ActivityResultLauncher<Intent>? = null
     private lateinit var bindingclass: ActivityMainBinding
-    private  var login = "empty"
-    private  var password = "empty"
-    private  var name = "empty"
-    private  var surname = "empty"
-    private  var surname2 = "empty"
+    private  var login = Constance.EMPTY
+    private  var password = Constance.EMPTY
+    private  var name = Constance.EMPTY
+    private  var surname = Constance.EMPTY
+    private  var surname2 = Constance.EMPTY
     private  var avatars = 0
 
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         bindingclass = ActivityMainBinding.inflate(layoutInflater)
@@ -57,7 +59,7 @@ class MainActivity : AppCompatActivity() {
         }
     }}
 
-  fun  onClickSignUp(view: View){
+  fun  onClickSignUp(@Suppress("UNUSED_PARAMETER")view: View){
 if (bindingclass.btSignUp.text == Constance.EXIT) {
     bindingclass.imageView.visibility = View.INVISIBLE
     bindingclass.btSignIn.visibility = View.VISIBLE
@@ -72,7 +74,7 @@ if (bindingclass.btSignUp.text == Constance.EXIT) {
     )
 }
   }
-    fun  onClickSignIn(view: View){
+    fun  onClickSignIn(@Suppress("UNUSED_PARAMETER")view: View){
 
 
             launcher2?.launch(
