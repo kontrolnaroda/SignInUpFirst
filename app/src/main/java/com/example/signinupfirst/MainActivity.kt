@@ -7,13 +7,12 @@ import android.view.View
 import androidx.activity.result.ActivityResult
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.core.view.isVisible
 import com.example.signinupfirst.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private var launcher: ActivityResultLauncher<Intent>? = null
     private var launcher2: ActivityResultLauncher<Intent>? = null
-    lateinit var bindingclass: ActivityMainBinding
+    private lateinit var bindingclass: ActivityMainBinding
     private  var login = "empty"
     private  var password = "empty"
     private  var name = "empty"
@@ -44,7 +43,7 @@ class MainActivity : AppCompatActivity() {
                     if (login == result.data?.getStringExtra(Constance.LOGIN)
                         && (password == result.data?.getStringExtra(Constance.PASSWORD))
                     ) {
-                        bindingclass.textView.text = " $name $surname $surname2"
+                        bindingclass.textView.text = "$name $surname $surname2"
                         bindingclass.imageView.visibility = View.VISIBLE
                         bindingclass.imageView.setImageResource(avatars)
                         bindingclass.btSignIn.visibility =View.GONE
@@ -73,7 +72,7 @@ if (bindingclass.btSignUp.text == Constance.EXIT) {
     )
 }
   }
-    fun  onClickSignIn(view: View){ 
+    fun  onClickSignIn(view: View){
 
 
             launcher2?.launch(
